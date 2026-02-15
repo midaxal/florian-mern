@@ -1,0 +1,10 @@
+import { configureStore } from "@reduxjs/toolkit"
+import usersReducer from "../features/users/usersSlice"
+import workoutsReducer from "../features/workouts/workoutSlice"
+
+export const store = configureStore({
+    reducer: {
+        users: usersReducer,
+        workouts: workoutsReducer
+    }
+})
