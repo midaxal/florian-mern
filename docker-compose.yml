@@ -1,0 +1,14 @@
+services:
+  backend:
+    ports:
+      - "4000:4000"
+    container_name: backend_mern
+    build: ./backend
+    env_file:
+      - ./backend/.env
+  
+  frontend:
+    ports:
+      - "5173:5173"
+    build: ./frontend
+    container_name: frontend_mern
