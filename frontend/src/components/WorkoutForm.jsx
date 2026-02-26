@@ -38,8 +38,7 @@ const WorkoutForm = () => {
 
         if(!res.ok){
             setError(json.error)
-        }
-        if(res.ok){
+        } else {
             setTitle("")
             setLoad("")
             setReps("")

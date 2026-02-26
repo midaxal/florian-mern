@@ -30,7 +30,7 @@ const Home = () => {
     if(user){
       fetchWorkouts()
     }
-  }, [user])
+  }, [user, dispatch])
 
   return (
     <div className="home">

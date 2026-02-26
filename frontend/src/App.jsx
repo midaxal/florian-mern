@@ -21,7 +21,7 @@ const App = () => {
     if(user){
       reactDispatch(addUser(user))
     }
-  }, [])
+  }, [reactDispatch])
 
   return (
     <div className="App">

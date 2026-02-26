@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    status: "idle",
-    error: null,
     workouts: []
 }
 
@@ -40,8 +38,6 @@ const workoutsSlice = createSlice({
 export const { addWorkout, deleteWorkout, removeWorkouts, setWorkouts } = workoutsSlice.actions
 
 export const getWorkouts = state => state.workouts.workouts
-export const getError = state => state.error
-export const getStatus = state => state.status
 
 
 export default workoutsSlice.reducer
