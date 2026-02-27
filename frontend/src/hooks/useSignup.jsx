@@ -25,7 +25,6 @@ export const useSignup = () => {
         } else {
             setError(null)
             localStorage.setItem("user", JSON.stringify(json))
-            console.log("Json: ", json)
             dispatch(addUser(json))
         }
     }

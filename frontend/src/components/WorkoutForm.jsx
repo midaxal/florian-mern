@@ -43,7 +43,6 @@ const WorkoutForm = () => {
             setLoad("")
             setReps("")
             setError(null)
-            console.log("new workout added", json)
             dispatch(addWorkout(json))
         }
     }

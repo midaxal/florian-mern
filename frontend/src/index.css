@@ -137,3 +137,7 @@ form.signup, form.login {
     background-color: white;
     border-radius: 4px;
 }
+
+#user-email {
+    margin-right: 10px;
+}
