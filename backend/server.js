@@ -14,7 +14,13 @@ app.use(express.json())
 app.use("/api/workouts", workoutRoutes)
 app.use("/api/user", userRoutes)
 
-mongoose.connect(process.env.MONGO_URI)
+const mongoUri = process.env.IS_LOCAL === "true" ? process.env.MONGO_URI_LOCAL : process.env.MONGO_URI_CLUSTER
+
+if(!mongoUri){
+  throw new Error("Mongo URI is not defined")
+}
+
+mongoose.connect(mongoUri)
     .then(() => {
         app.listen(4000, () => {
             console.log("app is listening on port " + 4000 + " and connected to mongo db")
