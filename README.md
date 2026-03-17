@@ -35,11 +35,6 @@ Go to the project directory
   cd florian-mern
 ```
 
-Create an Atlas URI connection parameter in `florian-mern/backend/.env` with your Atlas URI:
-```
-MONGO_URI=mongodb+srv://<username>:<password>@mernapp.eyx1hnm.mongodb.net/?appName=MERNapp
-```
-
 ## Run docker compose
 
 ```bash
